@@ -5,7 +5,7 @@ describe Cell do
   it 'should tell the board when its dead' do
     board = double()
     subject.board = board
-    board.should_receieve(:draw_cell).with(false)
+    expect(board).to receive(:draw_cell).with(false)
     subject.work
   end
 end
